@@ -9655,5 +9655,21 @@ h3 {
     border-color: #dee2e6;
   }
 }
+* {
+  scroll-behavior: smooth;
+}
+
+.me {
+  height: 200px;
+}
+
+body {
+  background-color: #f0f6ff;
+}
+
+.main-border {
+  box-shadow: 0 0 20px 10px #b9b9b9;
+  background-color: #f0f6ff;
+}
 
 /*# sourceMappingURL=main.css.map */
