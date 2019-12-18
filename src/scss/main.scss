@@ -1,0 +1,17 @@
+// This is where you can import other stylesheets or write your scss code
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+* {
+  scroll-behavior: smooth;
+}
+.me {
+  height: 200px;
+}
+body {
+  background-color: rgb(240, 246, 255);
+}
+
+.main-border {
+  box-shadow: 0 0 20px 10px rgb(185, 185, 185);
+  background-color: rgb(240, 246, 255);
+}
