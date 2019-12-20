@@ -14,4 +14,13 @@ body {
 .main-border {
   box-shadow: 0 0 20px 10px rgb(185, 185, 185);
   background-color: rgb(240, 246, 255);
+  transition: all 0.5s;
+}
+.project-card {
+  box-shadow: 0 0 20px 10px rgba(185, 185, 185, 0.308);
+}
+
+.main-border:hover {
+  box-shadow: 0 0 30px 0px rgba(112, 0, 0, 0.842);
+  background-color: rgb(240, 246, 255);
 }
