@@ -9670,6 +9670,16 @@ body {
 .main-border {
   box-shadow: 0 0 20px 10px #b9b9b9;
   background-color: #f0f6ff;
+  transition: all 0.5s;
+}
+
+.project-card {
+  box-shadow: 0 0 20px 10px rgba(185, 185, 185, 0.308);
+}
+
+.main-border:hover {
+  box-shadow: 0 0 30px 0px rgba(112, 0, 0, 0.842);
+  background-color: #f0f6ff;
 }
 
 /*# sourceMappingURL=main.css.map */
