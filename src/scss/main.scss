@@ -3,27 +3,104 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+@import "shadow";
+
 * {
   scroll-behavior: smooth;
 }
-.me {
-  height: 200px;
-  box-shadow: 0 0 20px 5px rgb(19, 19, 58);
-}
+
 body {
   background-color: rgb(240, 246, 255);
 }
 
-.main-border {
-  box-shadow: 0 0 20px 10px rgb(185, 185, 185);
-  background-color: rgb(240, 246, 255);
-  transition: all 0.5s;
-}
-.project-card {
-  box-shadow: 0 0 20px 10px rgba(185, 185, 185, 0.308);
+svg {
+  max-height: 50px;
+  max-width: 50px;
+  stroke: white;
+  stroke-width: 15px;
+  fill: none;
 }
 
-.main-border:hover {
-  box-shadow: 0 0 30px 0px rgba(112, 0, 0, 0.842);
-  background-color: rgb(240, 246, 255);
+.contact-svg {
+  stroke-dasharray: 0, 0, 2900;
+}
+
+svg:hover .contact-svg {
+  animation: select-svg 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes select-svg {
+  10% {
+    stroke-dasharray: 0, 500, 2300;
+  }
+  100% {
+    stroke-dasharray: 3300, 500, 300;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.name-txt {
+  animation-name: text-name;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  position: relative;
+  z-index: 100;
+}
+.name-shadow {
+  animation-name: shadows;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  width: 420px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.295);
+  box-shadow: 0px 0 20px 5px rgba(20, 20, 20, 0.1);
+  position: absolute;
+  bottom: -30px;
+  left: 112px;
+}
+
+@keyframes text-name {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(50px);
+  }
+
+  75% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shadows {
+  0% {
+    width: 420px;
+    height: 20px;
+    background: rgba(20, 20, 20, 0.1);
+  }
+  50% {
+    left: 220px;
+    width: 170px;
+    height: 5px;
+    background: rgba(20, 20, 20, 0.3);
+  }
+  100% {
+    width: 420px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.295);
+    box-shadow: 0px 0 20px 5px rgba(20, 20, 20, 0.1);
+  }
 }
